@@ -20,7 +20,7 @@ def directors_totals(nds)
     director_name_to_insert = dd[director_index][:name]
     movie_index = 0
     movie_gross_total = 0
-    while(dd[director_index][:movies][movie_index]]) do
+    while(dd[director_index][:movies][movie_index]) do
       movie_gross_total = movie_gross_total + dd[director_index][:movies][movie_index][:worldwide_gross]
       movie_index+=1
     end
