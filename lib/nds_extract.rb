@@ -22,10 +22,12 @@ def directors_totals(nds)
     movie_gross_total = 0
     while(dd[director_index][:movies][movie_index]]) do
       movie_gross_total = movie_gross_total + dd[director_index][:movies][movie_index][:worldwide_gross]
+      movie_index+=1
     end
-    result << 
+    result[director_name_to_insert] = movie_gross_total
     director_index+=1
   end
+  
   #
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
@@ -36,5 +38,5 @@ def directors_totals(nds)
   #
   # Be sure to return the result at the end!
   
-  nil
+  result
 end
