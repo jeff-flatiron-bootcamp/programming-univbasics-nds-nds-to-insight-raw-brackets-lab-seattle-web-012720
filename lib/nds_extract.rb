@@ -11,9 +11,21 @@ def directors_totals(nds)
   
   pp directors_database
   
-  
   result = {
   }
+  
+  director_index = 0
+  dd = directors_database
+  while (dd[director_index]) do
+    director_name_to_insert = dd[director_index][:name]
+    movie_index = 0
+    movie_gross_total = 0
+    while(dd[director_index][:movies][movie_index]]) do
+      movie_gross_total = movie_gross_total + dd[director_index][:movies][movie_index][:worldwide_gross]
+    end
+    result << 
+    director_index+=1
+  end
   #
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
